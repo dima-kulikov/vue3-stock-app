@@ -1,8 +1,13 @@
 <script setup>
+const props = defineProps({
+  name: {
+    type: String,
+  },
+});
 </script>
 
 <template>
-  <h2>Dima</h2>
+  <h2>{{ name }}</h2>
 </template>
 
 <style scoped>
