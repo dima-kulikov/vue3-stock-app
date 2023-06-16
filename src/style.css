@@ -1,0 +1,55 @@
+@import url('normalise.css');
+
+.block {
+    max-width: 1240px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.items-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-block-item {
+    width: calc(25% - 10px);
+    background-color: antiquewhite;
+    display: flex;
+    margin: 10px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item-block-item img {
+    width: 100%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background: black;
+    border-radius: 3px;
+}
+
+.item-block-item__name-companyname {
+    font-weight: 600;
+}
+
+.item-block-item__name-symbol {
+    font-size: 12px;
+    font-weight: 800;
+    color: gray;
+    margin-top: 5px;
+}
+
+.item-block-item__price {
+    margin-left: auto;
+    min-width: 50px;
+}
+
+.company-desc {
+    display: block;
+}
