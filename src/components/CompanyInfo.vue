@@ -6,11 +6,11 @@ const props = defineProps({
   },
 });
 const selectValue = ref("");
-console.log(selectValue);
 </script>
 
 <template>
   <div class="company-desc">
+    <h2>Select a company to learn more information about it:</h2>
     <select v-model="selectValue">
       <option value="" disabled>choice of company</option>
       <option v-for="(el, index) in stock" :key="el.symbol" :value="index">
@@ -19,6 +19,7 @@ console.log(selectValue);
     </select>
   </div>
   <div v-if="selectValue !== ''">
+    <h3>{{ stock[selectValue].companyName }}</h3>
     {{ stock[selectValue].description }}
   </div>
 </template>

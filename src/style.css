@@ -1,11 +1,22 @@
 @import url('normalise.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px 0 15px;
+}
 
 .block {
     max-width: 1240px;
-    margin: 0 auto;
+    margin: 20px auto;
     /* border: 1px solid red; */
-    background-color: aliceblue;
+    background-color: #a0b5c7;
     padding: 15px;
+    border-radius: 5px;
 }
 
 .items-block {
@@ -19,7 +30,6 @@
     background-color: antiquewhite;
     display: flex;
     margin: 10px 0;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 10px;
     border-radius: 10px;
@@ -52,4 +62,35 @@
 
 .company-desc {
     display: block;
+}
+
+.filter-block {
+    margin-bottom: 25px;
+}
+
+.filter-block button {
+    font-weight: 600;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: rgb(115, 223, 233);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.597);
+}
+
+.filter-block button:hover {
+    background-color: rgb(91, 241, 255);
+}
+
+@media screen and (max-width: 990px) {
+    .item-block-item {
+        width: calc(33% - 10px);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .item-block-item {
+        width: calc(50% - 10px);
+    }
 }

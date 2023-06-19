@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Stocks from "./components/Stocks.vue";
 import CompanyInfo from "./components/CompanyInfo.vue";
+import FilterStocks from "./components/FilterStocks.vue";
 
 const stock = ref(null);
 const errors = [];
@@ -28,6 +29,7 @@ onMounted(AxiosArr);
   <div class="block">
     <div class="block-flex">
       <h1>Shop price list</h1>
+      <FilterStocks :stock="stock" />
       <div class="items-block">
         <Stocks v-for="item in stock" :key="item.symbol" :item="item" />
       </div>
